@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.wetnoodle.worldwidevillagers.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VillagerMixin",
+    "VillagerTypeMixin",
+    "ZombieVillagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
