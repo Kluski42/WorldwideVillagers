@@ -15,9 +15,11 @@ public class WorldwideVillagers implements ModInitializer {
         VillagerType.BY_BIOME.put(Biomes.BIRCH_FOREST, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.OLD_GROWTH_BIRCH_FOREST, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.DARK_FOREST, VillagerType.PLAINS);
+        VillagerType.BY_BIOME.put(Biomes.PALE_GARDEN, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.FOREST, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.FLOWER_FOREST, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.MEADOW, VillagerType.PLAINS);
+        VillagerType.BY_BIOME.put(Biomes.CHERRY_GROVE, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.PLAINS, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.SUNFLOWER_PLAINS, VillagerType.PLAINS);
         VillagerType.BY_BIOME.put(Biomes.LUSH_CAVES, VillagerType.SWAMP);

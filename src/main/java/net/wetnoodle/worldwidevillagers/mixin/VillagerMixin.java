@@ -2,8 +2,8 @@ package net.wetnoodle.worldwidevillagers.mixin;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ReputationEventHandler;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.npc.Villager;
@@ -34,7 +34,7 @@ public abstract class VillagerMixin extends AbstractVillager implements Reputati
                 villagerType = ((Villager) ageableMob).getVillagerData().getType();
             }
             Villager villagerEntity = new Villager(EntityType.VILLAGER, serverLevel, villagerType);
-            villagerEntity.finalizeSpawn(serverLevel, serverLevel.getCurrentDifficultyAt(villagerEntity.getOnPos()), MobSpawnType.BREEDING, null);
+            villagerEntity.finalizeSpawn(serverLevel, serverLevel.getCurrentDifficultyAt(villagerEntity.getOnPos()), EntitySpawnReason.BREEDING, null);
             cir.setReturnValue(villagerEntity);
         }
     }
