@@ -1,5 +1,6 @@
 package net.wetnoodle.worldwidevillagers.mixin;
 
+import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntitySpawnReason;
@@ -27,11 +28,11 @@ public abstract class VillagerMixin extends AbstractVillager implements Reputati
     private void getBreedOffspringMixin(ServerLevel serverLevel, AgeableMob ageableMob, CallbackInfoReturnable<Villager> cir) {
         if (!VillagerBiomeLogic.isVillagerBiome(serverLevel.getBiome(this.getOnPos()))) {
             double d = this.random.nextDouble();
-            VillagerType villagerType;
+            Holder<VillagerType> villagerType;
             if (d < 0.5) {
-                villagerType = this.getVillagerData().getType();
+                villagerType = this.getVillagerData().type();
             } else {
-                villagerType = ((Villager) ageableMob).getVillagerData().getType();
+                villagerType = ((Villager) ageableMob).getVillagerData().type();
             }
             Villager villagerEntity = new Villager(EntityType.VILLAGER, serverLevel, villagerType);
             villagerEntity.finalizeSpawn(serverLevel, serverLevel.getCurrentDifficultyAt(villagerEntity.getOnPos()), EntitySpawnReason.BREEDING, null);

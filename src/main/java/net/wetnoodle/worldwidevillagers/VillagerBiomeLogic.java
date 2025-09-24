@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Random;
 
 public class VillagerBiomeLogic {
-    public static List<VillagerType> villagerTypes = new ArrayList<>();
+    public static List<ResourceKey<VillagerType>> villagerTypes = new ArrayList<>();
 
-    public static VillagerType getRandom() {
+    public static ResourceKey<VillagerType> getRandom() {
         Random random = new Random();
         return villagerTypes.get(random.nextInt(villagerTypes.size()));
     }

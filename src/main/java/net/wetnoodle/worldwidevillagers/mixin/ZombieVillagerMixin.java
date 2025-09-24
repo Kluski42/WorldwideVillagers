@@ -33,7 +33,7 @@ public abstract class ZombieVillagerMixin extends Zombie implements VillagerData
     ) {
         double d = new Random().nextDouble();
         if (d < OUTSIDER_PROB) {
-            this.setVillagerData(this.getVillagerData().setType(VillagerBiomeLogic.getRandom()));
+            this.setVillagerData(this.getVillagerData().withType(serverLevelAccessor.registryAccess(), VillagerBiomeLogic.getRandom()));
             cir.setReturnValue(super.finalizeSpawn(serverLevelAccessor, difficultyInstance, spawnReason, spawnGroupData));
         }
     }
